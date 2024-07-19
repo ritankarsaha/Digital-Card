@@ -1,26 +1,26 @@
 'use strict';
 
-const fs = require('fs');
-const path = require('path');
-const chalk = require('chalk');
-const boxen = require('boxen');
+import { writeFileSync } from 'fs';
+import { join } from 'path';
+import { white, gray, cyan, green, blue, red } from 'chalk';
+import boxen from 'boxen';
 
 const data = {
-  name: chalk.white('           Ritankar Saha'),
-  work: chalk.white('Back-End & Web3 Developer, Cloud Architect'),
-  twitter: `${chalk.gray('https://twitter.com/')}${chalk.cyan('ritankarxx')}`,
-  github: `${chalk.gray('https://github.com/')}${chalk.green('ritankarsaha')}`,
-  linkedin: `${chalk.gray('https://linkedin.com/in/')}${chalk.blue('ritankar-saha-8041b9289')}`,
-  web: chalk.cyan('https://ritankarsaha-portfolio.netlify.app/'),
-  blog: chalk.cyan(''),
-  npx: `${chalk.red('npx')} ${chalk.white('ritankarsaha')}`,
-  labelWork: chalk.white.bold('    Work:'),
-  labelTwitter: chalk.white.bold(' Twitter:'),
-  labelGitHub: chalk.white.bold('  GitHub:'),
-  labelLinkedIn: chalk.white.bold('LinkedIn:'),
-  labelWeb: chalk.white.bold('     Web:'),
-  labelBlog: chalk.white.bold('     Blog:'),
-  labelCard: chalk.white.bold('    Card:'),
+  name: white('           Ritankar Saha'),
+  work: white('Back-End & Web3 Developer, Cloud Architect'),
+  twitter: `${gray('https://twitter.com/')}${cyan('ritankarxx')}`,
+  github: `${gray('https://github.com/')}${green('ritankarsaha')}`,
+  linkedin: `${gray('https://linkedin.com/in/')}${blue('ritankar-saha-8041b9289')}`,
+  web: cyan('https://ritankarsaha-portfolio.netlify.app/'),
+  blog: cyan(''),
+  npx: `${red('npx')} ${white('ritankarsaha')}`,
+  labelWork: white.bold('    Work:'),
+  labelTwitter: white.bold(' Twitter:'),
+  labelGitHub: white.bold('  GitHub:'),
+  labelLinkedIn: white.bold('LinkedIn:'),
+  labelWeb: white.bold('     Web:'),
+  labelBlog: white.bold('     Blog:'),
+  labelCard: white.bold('    Card:'),
 };
 
 const newline = '\n';
@@ -41,7 +41,7 @@ const options = {
   borderStyle: 'round',
 };
 
-fs.writeFileSync(
-  path.join(__dirname, 'bin/output'),
-  chalk.green(boxen(output, options))
+writeFileSync(
+  join(__dirname, 'bin/output'),
+  green(boxen(output, options))
 );

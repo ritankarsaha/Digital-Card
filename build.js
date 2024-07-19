@@ -12,7 +12,7 @@ const data = {
   github: `${gray('https://github.com/')}${green('ritankarsaha')}`,
   linkedin: `${gray('https://linkedin.com/in/')}${blue('ritankar-saha-8041b9289')}`,
   web: cyan('https://ritankarsaha-portfolio.netlify.app/'),
-  blog: cyan(''),
+  blog: cyan('https://ritankar-blogging.netlify.app/'),
   npx: `${red('npx')} ${white('ritankarsaha')}`,
   labelWork: white.bold('    Work:'),
   labelTwitter: white.bold(' Twitter:'),

@@ -1,0 +1,37 @@
+{
+  "name": "ritankarsaha",
+  "version": "1.0.0",
+  "description": "A personal card for Ritankar Saha",
+  "main": "/bin/card.js",
+  "bin": {
+    "ritankarsaha": "./bin/card.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "homepage": "",
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "node build.js",
+    "dev": "npm run build && node ./bin/card.js"
+  },
+  "keywords": [
+    "digital card",
+    "npm",
+    "npm card",
+    "npx",
+    "npx card",
+    "business card"
+  ],
+  "author": "Ritankar Saha",
+  "files": [
+    "bin/card.js",
+    "bin/output"
+  ],
+  "devDependencies": {
+    "boxen": "^2.1.0",
+    "chalk": "^2.4.1"
+  },
+  "dependencies": {}
+}
